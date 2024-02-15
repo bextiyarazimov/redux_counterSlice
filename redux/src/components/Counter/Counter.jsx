@@ -15,13 +15,14 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const Counter = () => {
     const dispatch = useDispatch();
-    const handleIncrement = () => {
+    const counterVal = useSelector((state) => state);
+    const handleIncrement = () => {  
         dispatch(increment());
     };
 
 
 
-
+console.log(counterVal);
   return (
      <>
 <button onClick={handleIncrement}>Increment</button>

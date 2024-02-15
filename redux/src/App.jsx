@@ -1,7 +1,23 @@
+import { useSelector } from "react-redux";
+import Counter from "./components/Counter/Counter";
 
 
 const App = () => {
-  return <>App---- counter value from inside component</>;
+
+  const stateVal = useSelector((state) => state);
+  console.log(stateVal);
+
+
+
+  return (
+   <>
+  App---- counter value from inside component {stateVal.count}
+  
+  <Counter />
+  <Card />
+  
+  </>
+  );
   
 };
 
